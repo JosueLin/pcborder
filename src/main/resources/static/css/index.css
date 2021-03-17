@@ -94,7 +94,19 @@ label input {
   font-size: 18px;
   -webkit-appearance: none;
 }
-
+/* 设置 placeholder颜色 */
+input::-webkit-input-placeholder{
+  color:#eee;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color:#eee;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color:#eee;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+  color:#eee;
+}
 /* 设置尺寸格的格式 */
 .size {
   font-size: 16px;

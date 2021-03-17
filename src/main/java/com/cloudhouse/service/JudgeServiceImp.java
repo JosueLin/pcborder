@@ -50,7 +50,7 @@ public class JudgeServiceImp implements JudgeService{
         if(s4_1 == 1 && s4_2 == 1){
             //数据库减次数
             user.setChances((userServiceImp.query(user)).getChances()-1);
-            userServiceImp.update(user);
+            userServiceImp.updateUserChances(user);
             //发邮件
             String subject = "PCBOrder" + user.getStudentID() + user.getStudentName();
             String content = "studentID:" + user.getStudentID() + "\n" +
@@ -70,7 +70,7 @@ public class JudgeServiceImp implements JudgeService{
             if(s4_1 == 0){
                 //数据库减次数
                 user.setChances((userServiceImp.query(user)).getChances()-1);
-                userServiceImp.update(user);
+                userServiceImp.updateUserChances(user);
                 //发邮件
                 String subject = "PCBOrder" + user.getStudentID() + user.getStudentName();
                 String content = "studentID:" + user.getStudentID() + "\n" +
@@ -89,7 +89,7 @@ public class JudgeServiceImp implements JudgeService{
         }
         //数据库减次数
         user.setChances((userServiceImp.query(user)).getChances()-1);
-        userServiceImp.update(user);
+        userServiceImp.updateUserChances(user);
         //发邮件
         String subject = "PCBOrder" + user.getStudentID() + user.getStudentName();
         String content = "studentID:" + user.getStudentID() + "\n" +

@@ -4,7 +4,7 @@
  * @Author: YoungLetter
  * @Date: 2021-03-14 10:57:02
  * @LastEditors: Youngletter
- * @LastEditTime: 2021-03-15 23:34:43
+ * @LastEditTime: 2021-03-17 13:12:49
  */
 /* 
 增加功能：
@@ -80,7 +80,6 @@ function request(config) {
 
 // 发送个人信息
 function sendInformation(info) {
-  console.log(info.level.value)
   return request({
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
@@ -129,7 +128,6 @@ function testInformation() {
   // 对定时器使用了箭头函数，此时this指向不再是window，因此要注意window绑定的属性与该元素的绑定的属性
   if (flag) {
     sendInformation(info).then((res) => {
-      console.log("success" + res)
       if(res.data.result == "true") {
         // 预约成功，显示预约成功界面，三秒后刷新界面
         success.style.display = 'block'
@@ -140,8 +138,6 @@ function testInformation() {
           clearInterval(window.timer)
         }, 2000)
       } else {
-        console.log("成功哩的失败")
-        console.log(res)
         failure.style.display = 'block'
         failure.querySelector('.content').innerHTML = res.data.message
         // 预约失败，显示预约失败界面，三秒后隐藏
@@ -152,7 +148,6 @@ function testInformation() {
         }, 2000)
       }
     }).catch((res) => {
-      console.log("failure" + res)
       failure.style.display = 'block'
       failure.querySelector('.content').innerHTML = '预约失败'
       // 预约失败，显示预约失败界面，三秒后隐藏

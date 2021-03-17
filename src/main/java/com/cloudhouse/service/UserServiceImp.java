@@ -5,7 +5,6 @@ import com.cloudhouse.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 
 @Service
 public class UserServiceImp implements UserService{
@@ -18,13 +17,18 @@ public class UserServiceImp implements UserService{
     public int insertUser(User user){
         return userMapper.insertUser(user);
     }
-    public int update(User user){
-        return userMapper.updateUser(user);
+    public int updateUserChances(User user){
+        return userMapper.updateUserChances(user);
     }
     public int delete(User user){
         return userMapper.deleteUser(user);
     }
     public int updateAllChances(int chances){
         return userMapper.updateAllChances(chances);
+    }
+
+    @Override
+    public int updateUserWeChat(User user) {
+        return userMapper.updateUserWeChat(user);
     }
 }

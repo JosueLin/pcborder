@@ -1,0 +1,29 @@
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  type-aliases-package: com.cloudhouse.pojo
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloudhouse?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: 0
+  mail:
+    host: smtp.qq.com
+    username: 3246560243@qq.com
+    password: syrvrcfhrfgzchie
+    properties.mail.smtp.port: 465
+    from: 3246560243@qq.com
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: utf-8
+
+server:
+  port: 9090
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+  tomcat:
+    uri-encoding: UTF-8

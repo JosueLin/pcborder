@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?7kkyc2');
+  src: url('../fonts/icomoon.eot?7kkyc2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7kkyc2') format('truetype'),
+    url('../fonts/icomoon.woff?7kkyc2') format('woff'),
+    url('../fonts/icomoon.svg?7kkyc2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  height: 100%;
+  background-image: linear-gradient(to top right, rgba(236, 125, 221, 0.637), rgb(17, 188, 240));
+  background: -o-linear-gradient(top right, rgba(236, 125, 221, 0.637), rgb(17, 188, 240));/*Opera 11.10+*/
+  position: relative;
+}
+
+/* 设置logo图片大小位置 */
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+}
+
+/* 表单填写界面 */
+.login {
+  width: 80%;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.login h2 {
+  flex: 1;
+  width: 100%;
+  color: #fff;
+}
+
+label {
+  border: 2px solid #fff;
+  border-radius: 25px;
+  flex: 1;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  justify-content: center;
+  position: relative;
+  margin: 18px auto;
+  font-size: 18px;
+}
+
+/* 输入框说明 */
+label span {
+  color: #fff;
+  position: relative;
+}
+
+.icon {
+  font-family: 'icomoon';
+  left: 6px;
+}
+
+/* 普通输入框格式 */
+label input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  position: relative;
+  left: 12px;
+  font-size: 18px;
+  -webkit-appearance: none;
+}
+
+/* 设置尺寸格的格式 */
+.size {
+  font-size: 16px;
+  left: 8px;
+}
+
+#size {
+  width: 145px;
+  font-size: 16px;
+}
+
+/* 设置层数的格式 */
+.level {
+  left: -10px;
+  /* 应设置字体大小 */
+  font-size: 18px;
+}
+
+/* 复选框格式 */
+label select {
+  background-color: #fff;
+  position: relative;
+  left: 12px;
+  width: 130px;
+  font-size: 18px;
+  border-radius: 8px;
+}
+
+/* 预约框 */
+.login button {
+  text-align: center;
+  font-weight: 700;
+  color: rgba(236, 125, 221, 0.637);
+  font-size: 20px;
+  line-height: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background-color: #fff;
+  width: 100%;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+/* 成功与失败逻辑的样式 */
+.success,
+.failure {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.success {
+  color: rgb(104, 218, 104);
+}
+
+.failure {
+  color: rgb(165, 27, 27)
+}
+
+.success .content,
+.failure .content,
+.question .content {
+  line-height: 70px;
+  width: 70%;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 26px;
+  font-family: 'icomoon';
+  /* 换行展示 */
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-all;
+}
+
+/* 设置字体图标 */
+.success .content::before {
+  content: "\ea10";
+  margin-right: 8px;
+}
+
+.failure .content::before {
+  content: '\ea0d';
+  margin-right: 8px;
+}
+
+/* 设置遮罩层 */
+.success .bg::after,
+.failure .bg::after,
+.question .bg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: #000;
+  opacity: 0.3;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.question {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.content-title {
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.question button {
+  outline: none;
+  border: none;
+  padding: 10px 14px;
+  margin-left: 8px;
+  color: #fff;
+  background-color: skyblue;
+  border-radius: 8px;
+}
+
+/* 响应式布局，当页面宽度小于350px，将所有的字体都改小 */
+@media screen and (max-width:350px) {
+  label input {
+    font-size: 16px;
+  }
+  #size {
+    left: -2px;
+    width: 110px;
+  }
+  .level {
+    font-size: 17px;
+  }
+  label select {
+    font-size: 16px;
+    width: 106px;
+  }
+
+}
+/* input框的字体大小都改为16px */
+/* size框改为110px，left改为-2px */
+/* level 框改为100px，字体大小为16px，层数为17px */

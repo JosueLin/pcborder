@@ -1,0 +1,78 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: YoungLetter
+ * @Date: 2021-03-14 00:06:18
+ * @LastEditors: Youngletter
+ * @LastEditTime: 2021-03-15 23:35:34
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCB预约</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <div class="logo">
+    <img src="img/cloudhouselogo-png.png" alt="">
+  </div>
+  <div class="login">
+    <h2>PCB预约</h2>
+    <label for="number">
+      <span class="icon"></span>
+      <input type="text" placeholder="请输入学号" id="number">
+    </label>
+    <label for="name">
+      <span class="icon"></span>
+      <input type="text" placeholder="请输入姓名" id="name">
+    </label>
+    <label for="academy">
+      <span class="icon"></span>
+      <input type="text" placeholder="学院信息(如信息工程学院)" id="academy">
+    </label>
+    <label for="we-chat">
+      <span class="icon"></span>
+      <input type="text" placeholder="请输入微信号" id="we-chat">
+    </label>
+    <label for="size">
+      <span class="size">板子大小(cm)：</span>
+      <input type="text" placeholder="a*b格式(如5*3)" id="size">
+    </label>
+    <label for="level">
+      <span class="level">板子层数：</span>
+      <select name="" id="level">
+        <option selected>请选择层数</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </label>
+    <button>预 约</button>
+  </div>
+  <div class="question">
+    <div class="bg"></div>
+    <div class="content">
+      <div class="content-title">
+        您确定要打双面板吗？打双面板至少需要耗费半天时间哦（超过4小时）
+      </div>
+      <button class="confirm">确定</button>
+      <button class="cancel">取消</button>
+    </div>
+  </div>
+  <div class="success">
+    <div class="bg"></div>
+    <div class="content">预约成功</div>
+  </div>
+  <div class="failure">
+    <div class="bg"></div>
+    <div class="content">预约失败</div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
